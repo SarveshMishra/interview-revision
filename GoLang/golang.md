@@ -22,6 +22,27 @@
 - **Error Handling**: Go uses a unique error handling approach, where functions return an error value that must be checked explicitly. This encourages developers to handle errors properly and improves code reliability.
 - **Tooling**: Go has a rich set of tools for formatting, testing, and building code. The `go` command-line tool provides commands for managing dependencies, running tests, and generating documentation.
 
+### Naming Conventions
+
+- **Package Names**: Package names should be short, lowercase, and descriptive. Avoid using underscores or mixed case. For example, use `http` instead of `HTTP` or `HttpClient`.
+- **Variable Names**: Variable names should be descriptive and use camelCase. For example, use `userName` instead of `UserName` or `username`. Avoid using single-letter variable names except for loop counters.
+- **Function Names**: Function names should be descriptive and use camelCase. For example, use `calculateSum` instead of `CalculateSum` or `calcSum`. The first letter of the function name determines its visibility (exported or unexported).
+- **Constants**: Constant names should be in all uppercase letters with underscores separating words. For example, use `MAX_VALUE` instead of `MaxValue` or `maxValue`.
+- **Struct Names**: Struct names should be descriptive and use camelCase. For example, use `UserProfile` instead of `userProfile` or `Userprofile`. The first letter of the struct name determines its visibility (exported or unexported).
+- **Interface Names**: Interface names should be descriptive and use camelCase. It is common to add the suffix `er` to the interface name to indicate its purpose. For example, use `Reader` for an interface that defines a read operation.
+- **Error Variable Names**: Error variable names should be named `err` to indicate that they represent an error. For example, use `err := doSomething()` instead of `error := doSomething()`. This is a common convention in Go code.
+- **Package Imports**: When importing packages, use the package name as the alias if needed. For example, use `import "fmt"` instead of `import f "fmt"`. Avoid using short aliases unless necessary for clarity.
+- **Comments**: Use comments to explain the purpose of packages, functions, and complex code. Use single-line comments (`//`) for short explanations and multi-line comments (`/* ... */`) for longer descriptions. Comments should be clear and concise.
+- **Error Handling**: When handling errors, use the `if err != nil` pattern to check for errors. This is a common convention in Go code. For example:
+```go
+if err != nil {
+    // Handle the error
+}
+```
+- **Testing**: When writing tests, use the `*_test.go` naming convention for test files. Use the `testing` package to create test functions and run them using the `go test` command. Test function names should start with `Test` followed by the name of the function being tested. For example, use `func TestCalculateSum(t *testing.T)` for testing the `calculateSum` function.
+- **Documentation**: Use comments to document packages, functions, and types. The first line of a comment should be a complete sentence that describes the purpose of the package, function, or type. Use `godoc` to generate documentation from comments in your code.
+
+
 ### Basic Syntax
 
 - **Hello World**:
