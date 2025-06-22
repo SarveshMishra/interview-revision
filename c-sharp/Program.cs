@@ -28,6 +28,9 @@ class Program
         ControlFlow.IsPatternMatching(3.14);                      // Input is of an unknown type
         // Example usage of the ForLoopExample method
         ControlFlow.ForLoopExample(5);                            // Prints numbers 0 to 4
+        int a = 10;
+        Function_Examples.DoWork(ref a, out int b);
+        Console.WriteLine($"a: {a}, b: {b}");
     }
 }
 
